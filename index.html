@@ -1,7 +1,93 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello??</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krissy Tran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<!-- note: this site has used generative ai to help write the code, the design is entirely my work-->
+<body> 
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-box">
+    <a href="#" class="nav-link active" data-section="home">HOME</a>
+    <a href="#"class="nav-link" data-section="projects">PROJECTS</a>
+    <a href="#"class="nav-link" data-section="skills">SKILLS</a>
+    <a href="#"class="nav-link" data-section="interests">INTERESTS</a>
+    </div>
+    <div class="window-controls">
+    <a href="#"class="window-button nav-link" "><i class="fa fa-remove"></i></a>
+    </div>
+  </nav>
+
+  <!-- Main Window -->
+   <!-- HOME Section -->
+  <div class="window section" id="home">
+    <div class="left-panel">
+        <img src="Tran Krissy Photo.jpg" alt="Krissy Tran" class="profile-pic" />
+         <div class="social-icons">
+            <a href="mailto:trank9@myumanitoba.ca"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/krissy-tran/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/krissytran" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+    </div>
+    <div class="right-panel">
+      <h1 class="name">Krissy Tran</h1>
+          <h3 class="subtitle" style="text-indent: 2em;">Third year Computer Science student</h2>
+          <p>Welcome to my website! Here, you'll find various ways to contact me & my current personal projects I am working on.</p>
+
+          <p>I'm an undergraduate student pursuing an Honours B.C.Sc. whose current interests include: website development & design, computer graphics, software development, and game development.</p>
+    </div>
+    
+  </div>
+  <div class="window section hidden" id="skills">
+    <div class="content">
+      <h1>Skills</h1>
+      <p> Page Coming soon :)</p>
+    </div>
+  </div>  
+
+  <div class="window section hidden" id="projects">
+    <div class="content">
+      <h1>My Projects</h1>
+      <p>Page in development...</p>
+    </div>
+  </div>
+
+  <div class="window section hidden" id="interests">
+    <div class="content">
+      <h1>Interests</h1>
+      <p> work in progress....</p>
+    </div>
+  </div>  
+
+  <script>
+    const links = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Remove "active" from all nav links
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+        // Hide all sections
+        sections.forEach(sec => sec.classList.add('hidden'));
+
+        // Show the clicked section
+        const target = document.getElementById(link.dataset.section);
+        target.classList.remove('hidden');
+      });
+    });
+  </script>
 </body>
+<p style="font-size: 8px; padding: 10px;">I'm hosted with GitHub Pages.</p>
+
 </html>

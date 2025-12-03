@@ -1,0 +1,115 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;   
+}
+
+body {
+    font-family: "Press Start 2P", monospace;
+    background-color: #2e0c18;
+    color: #fce1ee;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #4a2031;
+    padding: 0px 0px;
+}
+nav a {
+    text-decoration: none;
+    color: #fcd5e4;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #6d314c;
+    padding: 6px 12px;
+    border: 0px solid #c17894;
+}
+nav a:hover{
+    background-color: #8a3a5e;
+}
+.window{
+    margin: 30px;
+    /* border: 4px double #f0b8cd;*/
+    padding: 50px;
+    position: relative;
+    color: #fce1ee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+.window-controls{
+  display: flex;
+}
+.window-button{
+  align-items: end;
+  background-color: #4a2031;
+}
+.nav-box{
+  display: flex;
+}
+.left-panel {
+  text-align: center;
+}
+.right-panel {
+  max-width: 700px;
+}
+
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 6px solid #fdd;
+  object-fit: cover;
+  margin-bottom: 0px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.profile h1 {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.social-icons {
+  margin-top: 0px;
+  font-size: 30px;
+}
+
+.social-icons a {
+  
+  color: #fdd;
+  text-decoration: none;
+}
+
+.tools ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+
+
+.section {
+  display: flexbox;
+}
+
+.section.hidden {
+  display: none;
+}
+
+nav a.active {
+  background-color: #d983aa;
+  color: #fff;
+}
