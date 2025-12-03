@@ -113,3 +113,11 @@ nav a.active {
   background-color: #d983aa;
   color: #fff;
 }
+
+.footer{
+  position: fixed;     
+       text-align: left;    
+       bottom: 0px; 
+       width: 100%;
+       font-size: 8pt;
+}
