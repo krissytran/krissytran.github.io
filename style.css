@@ -116,7 +116,8 @@ nav a.active {
 
 .footer{
   position: fixed;     
-       text-align: left;    
+       text-align: left; 
+       position: absolute;   
        bottom: 0px; 
        width: 100%;
        font-size: 5pt;
