@@ -14,33 +14,47 @@ body {
 
 nav{
     display: flex;
+    align-items: left;
     justify-content: space-between;
     background-color: #4a2031;
     padding: 0px 0px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 nav a {
     text-decoration: none;
     color: #fcd5e4;
-    font-size: 20px;
+    font-size: clamp(0px, 2.2vw, 20px);
     font-weight: bold;
     background-color: #6d314c;
     padding: 6px 12px;
     border: 0px solid #c17894;
+  
 }
 nav a:hover{
     background-color: #8a3a5e;
 }
 .window{
-    margin: 30px;
+    margin: 10px;
     /* border: 4px double #f0b8cd;*/
-    padding: 50px;
     position: relative;
     color: #fce1ee;
     display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: minmax(150px, 250px) 1fr;
     justify-content: center;
     align-items: flex-start;
     gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+nav a.active {
+  background-color: #d983aa;
+  color: #fff;
+}
+.nav-box{
+  display: flex;
+  flex-shrink: 1;
 }
 .window-controls{
   display: flex;
@@ -49,14 +63,20 @@ nav a:hover{
   align-items: end;
   background-color: #4a2031;
 }
-.nav-box{
-  display: flex;
-}
+
 .left-panel {
   text-align: center;
 }
 .right-panel {
-  max-width: 700px;
+  flex-shrink: 1;
+  min-width: 400px;
+  max-width: 100%;
+}
+.right-panel-text {
+  display: flex;
+  flex-shrink: inherit;
+     font-size: clamp(0px, 2.2vw, 25px);
+
 }
 
 
@@ -102,17 +122,14 @@ nav a:hover{
 
 
 .section {
-  display: flexbox;
+  display: flex;
 }
 
 .section.hidden {
   display: none;
 }
 
-nav a.active {
-  background-color: #d983aa;
-  color: #fff;
-}
+
 
 .footer{
   position: fixed;     
