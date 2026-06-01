@@ -102,6 +102,10 @@
               <span class="fi-icon">🎮</span>
               <span class="file-label">muted</span>
             </div>
+            <div class="file-icon" data-proj="pda" tabindex="0">
+              <span class="fi-icon">📱</span>
+              <span class="file-label">PDA</span>
+            </div>
           </div>
 
           <table id="file-list">
@@ -110,10 +114,12 @@
             </thead>
             <tbody>
               <tr class="fl-row" data-proj="portfolio"><td>🌐
-                  portfolio-site</td><td>Web App</td><td>HTML/CSS/JS</td><td>✅
+                  portfolio-site</td><td>Web App</td><td>HTML/CSS/JS</td><td>
                   Live</td></tr>
               <tr class="fl-row" data-proj="muted"><td>🎮 muted</td><td>Game
-                  Dev</td><td>GDScript</td><td>✅ Complete</td></tr>
+                  Dev</td><td>GDScript</td><td>Complete</td></tr>
+              <tr class="fl-row" data-proj="pda"><td>📱
+                  PDA</td><td>App</td><td>Various</td><td>In Progress</td></tr>
             </tbody>
           </table>
         </div>
@@ -123,8 +129,8 @@
           <div class="skills-wrap">
             <div class="skill-group">
               <div class="skill-group-title">💬 Languages</div>
-              <div class="skill-row"><span class="skill-name">C /
-                  C++</span></div>
+              <div class="skill-row"><span class="skill-name">C / C++ / C#
+                </span></div>
 
               <div class="skill-row"><span
                   class="skill-name">Python</span></div>
@@ -133,18 +139,25 @@
                   class="skill-name">HTML/CSS/JS</span></div>
               <div class="skill-row"><span
                   class="skill-name">SQL</span></div>
+              <div class="skill-row"><span
+                  class="skill-name">R</span></div>
+              <div class="skill-row"><span
+                  class="skill-name">GDScript</span></div>
             </div>
+
             <div class="skill-group">
               <div class="skill-group-title">🛠️ Tools &amp; Frameworks</div>
 
               <div class="skill-row"><span class="skill-name">Git /
                   GitHub</span></div>
               <div class="skill-row"><span class="skill-name">Linux</span></div>
-              <div class="skill-row"><span class="skill-name">Visual Studio
-                  Code</span></div>
+              <div class="skill-row"><span
+                  class="skill-name">VSCode</span></div>
+              <div class="skill-row"><span
+                  class="skill-name">RStudio</span></div>
             </div>
           </div>
-          <p class="coming-soon">More coming soon :)</p>
+          <p class="coming-soon">Continually learning. </p>
         </div>
 
         <!-- INTERESTS -->
@@ -213,15 +226,21 @@
       const projects = {
         portfolio: {
           icon: '🌐', name: 'portfolio-site', type: 'Web App', lang: 'HTML/CSS/JS', status: 'Live',
-          desc: "My personal portfolio website — the one you're looking at right now! Built with a retro-flavoured aesthetic using Press Start 2P. Made with the help of Anthropic's Claude.",
+          desc: "My personal portfolio website — the one you're looking at right now. Built with a retro aesthetic using Press Start 2P. Made with the help of Anthropic's Claude.",
           tags: ['HTML', 'CSS', 'JavaScript', 'Design'],
           github: 'https://github.com/krissytran.github.io', live: null
         },
         muted: {
           icon: '🎮', name: 'muted', type: 'Game Dev', lang: 'GDScript', status: 'Complete',
-          desc: "A 3D puzzle-platformer where 3 cats are trying to escape from an evil scientist's lab. Made as a group project for COMP 2060, Introduction to Video Game Development.",
+          desc: "A 3D puzzle-platformer where 3 cats are trying to escape from an evil scientist's lab. Made as a group project for COMP 2060, Introduction to Video Game Development, Winter 2026.",
           tags: ['GDScript', 'Godot', 'Game Dev', '3D'],
           itch: 'https://pieberrykinnie.itch.io/muted', live: null
+        },
+        pda: {
+          icon: '📱', name: 'PDA', type: 'App', lang: 'Java, C, GDScript', status: 'In Progress',
+          desc: "I'm making Personal Digital Assistant App, inspired by devices such as the Palm Pilot, within various different platforms so I can practice the skills I learned through my coursework. Android Studio version intended to be used on my phone. Once I have a basic idea for the features, I'll implement them in Godot to see if I can export it as a homebrew title to my 3DS. Then, finally I will try making a version for my ESP32 CYD.",
+          tags: ['Java', 'Android Studio','C','Arduino','GDScript', 'Godot', 'Game Dev'],
+          live: null
         }
       };
 
