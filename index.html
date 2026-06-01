@@ -1,98 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krissy Tran</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krissy Tran</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div id="desktop">
+      <div id="main-window">
 
-</head>
-<!-- note: this site has used generative ai to help write the code, the design is entirely my work-->
+        <!-- Title Bar -->
+        <div id="titlebar">
+          <div class="title-left">
+            <span class="title-icon">🌸</span>
+            <span>Krissy Tran — Portfolio</span>
+          </div>
+          <div class="title-buttons">
+            <div class="title-btn">_</div>
+            <div class="title-btn">□</div>
+            <div class="title-btn close-btn">✕</div>
+          </div>
+        </div>
 
-<body>
+        <!-- Nav Bar -->
+        <nav id="menubar">
+          <div class="nav-tabs">
+            <a href="#" class="nav-link active" data-section="home">HOME</a>
+            <a href="#" class="nav-link" data-section="projects">PROJECTS</a>
+            <a href="#" class="nav-link" data-section="skills">SKILLS</a>
+            <a href="#" class="nav-link" data-section="interests">INTERESTS</a>
+          </div>
+          <div class="window-controls">
+            <a href="mailto:krissysys@gmail.com" class="nav-ctrl-btn"
+              title="Email">✉</a>
+            <a href="https://github.com/krissytran" target="_blank"
+              class="nav-ctrl-btn" title="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/krissy-tran/" target="_blank"
+              class="nav-ctrl-btn" title="LinkedIn"><i
+                class="fab fa-linkedin"></i></a>
+          </div>
+        </nav>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="nav-box">
-      <a href="#" class="nav-link active" data-section="home">HOME</a>
-      <a href="#" class="nav-link" data-section="projects">PROJECTS</a>
-      <a href="#" class="nav-link" data-section="skills">SKILLS</a>
-      <a href="#" class="nav-link" data-section="interests">INTERESTS</a>
+        <!-- Address Bar -->
+        <div id="addressbar">
+          <span class="addr-label">Address</span>
+          <div class="addr-input" id="addr-display">C:\KrissyTran\Home</div>
+        </div>
+
+        <!-- HOME -->
+        <div class="section active" id="home">
+          <div class="home-layout">
+            <div class="home-text">
+              <h1 class="name">Krissy Tran</h1>
+              <h3 class="subtitle">Fourth Year Computer Science Student</h3>
+              <p>Welcome to my website! Here you'll find various ways to contact
+                me &amp; my current personal projects I'm working on.</p>
+              <p>I'm an undergraduate student pursuing an Honours B.C.Sc. whose
+                current interests include: website development &amp; design,
+                computer graphics, software development, and game
+                development.</p>
+
+            </div>
+          </div>
+          <div class="info-panel">
+            <div class="info-panel-title">📌 Quick Info</div>
+            <div class="info-panel-body">
+              <span>📍 University of Manitoba</span>
+              <span>📧 trank9@myumanitoba.ca</span>
+              <span>📅 Expected Graduation: 2027</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="section hidden" id="projects">
+          <div class="explorer-toolbar">
+            <span class="explorer-label">📁 Projects</span>
+            <div class="view-btns">
+              <button class="view-btn active" id="btn-icons"
+                title="Icon view">⊞</button>
+              <button class="view-btn" id="btn-list"
+                title="List view">☰</button>
+            </div>
+            <span class="explorer-hint">Double-click a project to open</span>
+          </div>
+
+          <div id="file-grid">
+            <div class="file-icon" data-proj="portfolio" tabindex="0">
+              <span class="fi-icon">🌐</span>
+              <span class="file-label">portfolio-site</span>
+            </div>
+            <div class="file-icon" data-proj="muted" tabindex="0">
+              <span class="fi-icon">🎮</span>
+              <span class="file-label">muted</span>
+            </div>
+          </div>
+
+          <table id="file-list">
+            <thead>
+              <tr><th>Name</th><th>Type</th><th>Language</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr class="fl-row" data-proj="portfolio"><td>🌐
+                  portfolio-site</td><td>Web App</td><td>HTML/CSS/JS</td><td>✅
+                  Live</td></tr>
+              <tr class="fl-row" data-proj="muted"><td>🎮 muted</td><td>Game
+                  Dev</td><td>GDScript</td><td>✅ Complete</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section hidden" id="skills">
+          <div class="skills-wrap">
+            <div class="skill-group">
+              <div class="skill-group-title">💬 Languages</div>
+              <div class="skill-row"><span class="skill-name">C / C++</span><div
+                  class="skill-track"><div class="skill-fill"
+                    style="width:55%"></div></div><span
+                  class="skill-pct">55%</span></div>
+              <div class="skill-row"><span class="skill-name">Python</span><div
+                  class="skill-track"><div class="skill-fill"
+                    style="width:70%"></div></div><span
+                  class="skill-pct">70%</span></div>
+              <div class="skill-row"><span class="skill-name">Java</span><div
+                  class="skill-track"><div class="skill-fill"
+                    style="width:75%"></div></div><span
+                  class="skill-pct">75%</span></div>
+              <div class="skill-row"><span
+                  class="skill-name">HTML/CSS/JS</span><div
+                  class="skill-track"><div class="skill-fill"
+                    style="width:70%"></div></div><span
+                  class="skill-pct">70%</span></div>
+              <div class="skill-row"><span
+                  class="skill-name">SQL</span><div
+                  class="skill-track"><div class="skill-fill"
+                    style="width:50%"></div></div><span
+                  class="skill-pct">50%</span></div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-title">🛠️ Tools &amp; Frameworks</div>
+
+              <div class="skill-row"><span class="skill-name">Git /
+                  GitHub</span><div class="skill-track"><div class="skill-fill"
+                    style="width:80%"></div></div><span
+                  class="skill-pct">80%</span></div>
+              <div class="skill-row"><span class="skill-name">Linux /
+                  Bash</span><div class="skill-track"><div class="skill-fill"
+                    style="width:50%"></div></div><span
+                  class="skill-pct">50%</span></div>
+              <div class="skill-row"><span class="skill-name">Visual Studio
+                  Code</span><div
+                  class="skill-track"><div class="skill-fill"
+                    style="width:70%"></div></div><span
+                  class="skill-pct">70%</span></div>
+            </div>
+          </div>
+          <p class="coming-soon">More coming soon :)</p>
+        </div>
+
+        <!-- INTERESTS -->
+        <div class="section hidden" id="interests">
+          <ul class="interests-list">
+            <li><span class="ii">🎮</span><div><strong>Game
+                  Development</strong><br>I like
+                learning how games work.</div></li>
+            <li><span class="ii">🖼️</span><div><strong>Computer
+                  Graphics</strong><br>I like learning how to draw stuff on the
+                screen. Learning OpenGL/WebGL.</div></li>
+            <li><span class="ii">🌐</span><div><strong>Web
+                  Design</strong><br>I enjoy expanding repretoire by trying
+                different designs and making lots of designs.</div></li>
+            <li><span class="ii">📚</span><div><strong>Low-Level
+                  Programming</strong><br>I'm interested in systems programming,
+                emulation, and understanding how hardware and software
+                interact.</div></li>
+            <li><span class="ii">🎵</span><div><strong>Music &amp; Rhythm
+                  Games</strong><br>Big fan of rhythm games and learning new
+                instruments.</div></li>
+          </ul>
+          <p class="coming-soon">Work in progress...</p>
+        </div>
+
+        <!-- Status Bar -->
+        <div id="statusbar">
+          <div class="status-pane grow" id="status-text">Ready</div>
+          <div class="status-pane" id="status-right">krissy.exe</div>
+        </div>
+
+      </div><!-- /main-window -->
+
+      <!-- Project Detail Dialog -->
+      <div id="overlay"></div>
+      <div id="project-detail">
+        <div class="pd-titlebar">
+          <span id="pd-title-text">Project</span>
+          <div class="pd-close-btn" id="pd-close">✕</div>
+        </div>
+        <div class="pd-body">
+          <div class="pd-header-row">
+            <span class="pd-icon" id="pd-icon">📁</span>
+            <div>
+              <div class="pd-name" id="pd-name">Project Name</div>
+              <div class="pd-meta" id="pd-meta"></div>
+            </div>
+          </div>
+          <div class="pd-desc" id="pd-desc"></div>
+          <div class="tag-row" id="pd-tags"></div>
+          <div class="pd-links" id="pd-links"></div>
+        </div>
+      </div>
+
+    </div><!-- /desktop -->
+
+    <!-- Taskbar -->
+    <div id="taskbar">
+      <button id="start-btn">🌸 Start</button>
+      <div class="taskbar-sep"></div>
+      <div class="taskbar-window-btn">🖥️ Krissy Tran — Portfolio</div>
+      <div id="clock"><span id="clock-time">--:--</span></div>
     </div>
-    <div class="window-controls">
-      <a href="#" class="window-button nav-link" "><i class=" fa fa-remove"></i></a>
-    </div>
-  </nav>
 
-  <!-- Main Window -->
-  <!-- HOME Section -->
-  <div class="window section" id="home">
-    <!-- <img src="konata lucky star anime.jpg" alt="Krissy Tran" class="profile-pic" /> -->
+    <script>
+      const projects = {
+        portfolio: {
+          icon: '🌐', name: 'portfolio-site', type: 'Web App', lang: 'HTML/CSS/JS', status: 'Live',
+          desc: "My personal portfolio website — the one you're looking at right now! Built with a retro-flavoured aesthetic using Press Start 2P. Made with the help of Anthropic's Claude.",
+          tags: ['HTML', 'CSS', 'JavaScript', 'Design'],
+          github: 'https://github.com/krissytran.github.io', live: null
+        },
+        muted: {
+          icon: '🎮', name: 'muted', type: 'Game Dev', lang: 'GDScript', status: 'Complete',
+          desc: "A 3D puzzle-platformer where 3 cats are trying to escape from an evil scientist's lab. Made as a group project for COMP 2060, Introduction to Video Game Development.",
+          tags: ['GDScript', 'Godot', 'Game Dev', '3D'],
+          itch: 'https://pieberrykinnie.itch.io/muted', live: null
+        }
+      };
 
-    <div class="right-panel-text"></div>
-    <h1 class="name">Krissy Tran</h1>
-    <h3 class="subtitle" style="text-indent: 2em;">Third Year Computer Science Student</h3>
+      const addrMap = { home:'C:\\KrissyTran\\Home', projects:'C:\\KrissyTran\\Projects', skills:'C:\\KrissyTran\\Skills', interests:'C:\\KrissyTran\\Interests' };
+      const statusMap = { home:'Home — welcome!', projects:'2 objects', skills:'8 skills listed', interests:'6 interests' };
 
-    <p>Welcome to my website! Here, you'll find various ways to contact me & my current personal projects I am working
-      on.</p>
-    <p>I'm an undergraduate student pursuing an Honours B.C.Sc. whose current interests include: website development &
-      design, computer graphics, software development, and game development.</p>
-    <div class="social-icons">
-      <a href="mailto:trank9@myumanitoba.ca"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/krissy-tran/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/krissytran" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </div>
-  </div>
+      function navigate(section) {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', l.dataset.section === section));
+        document.querySelectorAll('.section').forEach(s => {
+          s.classList.toggle('active', s.id === section);
+          s.classList.toggle('hidden', s.id !== section);
+        });
+        document.getElementById('addr-display').textContent = addrMap[section] || addrMap.home;
+        document.getElementById('status-text').textContent = statusMap[section] || '';
+      }
 
-  </div>
-  <div class="window section hidden" id="skills">
-    <div class="content">
-      <h1>Skills</h1>
-      <p> Page Coming soon :)</p>
-    </div>
-  </div>
-
-  <div class="window section hidden" id="projects">
-    <div class="content">
-      <h1>My Projects</h1>
-      <p>Page in development...</p>
-    </div>
-  </div>
-
-  <div class="window section hidden" id="interests">
-    <div class="content">
-      <h1>Interests</h1>
-      <p> work in progress....</p>
-    </div>
-  </div>
-
-  <script>
-    const links = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.section');
-
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        // Remove "active" from all nav links
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-
-        // Hide all sections
-        sections.forEach(sec => sec.classList.add('hidden'));
-
-        // Show the clicked section
-        const target = document.getElementById(link.dataset.section);
-        target.classList.remove('hidden');
+      document.querySelectorAll('.nav-link[data-section]').forEach(l => {
+        l.addEventListener('click', e => { e.preventDefault(); navigate(l.dataset.section); });
       });
-    });
-  </script>
-</body>
 
+      const btnIcons = document.getElementById('btn-icons');
+      const btnList  = document.getElementById('btn-list');
+      const fileGrid = document.getElementById('file-grid');
+      const fileList = document.getElementById('file-list');
 
+      btnIcons.addEventListener('click', () => {
+        btnIcons.classList.add('active'); btnList.classList.remove('active');
+        fileGrid.style.display = 'flex'; fileList.style.display = 'none';
+      });
+      btnList.addEventListener('click', () => {
+        btnList.classList.add('active'); btnIcons.classList.remove('active');
+        fileGrid.style.display = 'none'; fileList.style.display = 'table';
+      });
+
+      const detail  = document.getElementById('project-detail');
+      const overlay = document.getElementById('overlay');
+
+      function openProject(key) {
+        const p = projects[key]; if (!p) return;
+        document.getElementById('pd-icon').textContent = p.icon;
+        document.getElementById('pd-name').textContent = p.name;
+        document.getElementById('pd-title-text').textContent = p.name;
+        document.getElementById('pd-meta').textContent = `${p.type}  ·  ${p.lang}  ·  ${p.status}`;
+        document.getElementById('pd-desc').textContent = p.desc;
+        document.getElementById('pd-tags').innerHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+        const linksEl = document.getElementById('pd-links');
+        linksEl.innerHTML = '';
+        if (p.github) {
+          const a = document.createElement('a');
+          a.href = p.github; a.target = '_blank'; a.className = 'pd-btn primary'; a.textContent = '⬡ GitHub';
+          linksEl.appendChild(a);
+        }
+        if (p.itch) {
+          const a = document.createElement('a');
+          a.href = p.itch; a.target = '_blank'; a.className = 'pd-btn primary'; a.textContent = '⬡ Itch.io';
+          linksEl.appendChild(a);
+        }
+        const cb = document.createElement('button');
+        cb.className = 'pd-btn'; cb.textContent = '✕ Close'; cb.onclick = closeDetail;
+        linksEl.appendChild(cb);
+        detail.classList.add('open'); overlay.classList.add('open');
+      }
+
+      function closeDetail() {
+        detail.classList.remove('open'); overlay.classList.remove('open');
+        document.querySelectorAll('.file-icon, .fl-row').forEach(el => el.classList.remove('selected'));
+      }
+
+      document.getElementById('pd-close').addEventListener('click', closeDetail);
+      overlay.addEventListener('click', closeDetail);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+      document.querySelectorAll('.file-icon').forEach(el => {
+        el.addEventListener('click', () => {
+          document.querySelectorAll('.file-icon').forEach(i => i.classList.remove('selected'));
+          el.classList.add('selected');
+        });
+        el.addEventListener('dblclick', () => openProject(el.dataset.proj));
+        el.addEventListener('keydown', e => { if (e.key === 'Enter') openProject(el.dataset.proj); });
+      });
+
+      // on mobile, single-tap opens the detail (no dblclick)
+      if ('ontouchstart' in window) {
+        document.querySelectorAll('.file-icon').forEach(el => {
+          el.addEventListener('click', () => openProject(el.dataset.proj));
+        });
+        document.querySelectorAll('.fl-row').forEach(el => {
+          el.addEventListener('click', () => openProject(el.dataset.proj));
+        });
+      } else {
+        document.querySelectorAll('.fl-row').forEach(el => {
+          el.addEventListener('click', () => {
+            document.querySelectorAll('.fl-row').forEach(r => r.classList.remove('selected'));
+            el.classList.add('selected');
+          });
+          el.addEventListener('dblclick', () => openProject(el.dataset.proj));
+        });
+      }
+
+      function tick() {
+        const n = new Date();
+        document.getElementById('clock-time').textContent =
+          n.getHours().toString().padStart(2,'0') + ':' + n.getMinutes().toString().padStart(2,'0');
+      }
+      tick(); setInterval(tick, 10000);
+    </script>
+  </body>
 </html>
